@@ -4,3 +4,15 @@ amos_slices_2d/
 amos/
 amos_patches_3d/
 amos_slices_2d/
+amos/
+amos_patches_3d/
+amos_slices_2d/
+*.png
+*.jpg
+*.jpeg
+*.nii
+*.nii.gz
+*.pth
+*.pt
+*.npy
+*.npz
