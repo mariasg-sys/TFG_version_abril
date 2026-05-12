@@ -26,11 +26,11 @@ class DoubleConv(nn.Module):
 
 class UNET(nn.Module):
     """
-    U-Net 2D multiclase para segmentacion por slices.
+    U-Net 2D multiclase: segmenta por slices previamente obtenidas de los NIfTI
 
-    Para AMOS conviene usar:
-    - in_channels=1 si cada entrada es un slice CT/MRI en escala de grises.
-    - out_channels=NUM_CLASSES, por ejemplo fondo + organos.
+    Para AMOS usamos:
+    - in_channels=1 ya que cada entrada es un slice de CT en escala de grises.
+    - out_channels=NUM_CLASSES, para que me diferencie órganos + fondo, 15+1 = 16.
     """
 
     def __init__(self, in_channels=1, out_channels=16, features=(32, 64, 128, 256), dropout=0.1):
